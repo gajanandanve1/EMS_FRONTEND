@@ -1,0 +1,84 @@
+<p>evaluationlist works!</p>
+<section>
+    <div class="row" style="padding-top: 1%">
+      <div class="col-10">
+        <h3>EVALUATION LIST </h3>
+      </div>
+      <div class="col-2">
+        <button type="submit" class="btn btn-dark"  routerLink="/dashboard/add-evaluation">Add Evaluation</button>
+      </div>
+    </div>
+    <div class="search-employee">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" 
+      autocomplete="off" placeholder="Start searching here">
+    </div>
+  
+    <br />
+   
+    <br>
+  <div class="table-responsive text-nowrap">
+   
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Evaluation ID
+          </th>
+          <th>Employee Id</th>
+          <th>Evaluation Date</th>
+          <th>Core Java</th>
+          <th>SpringBooy</th>
+          <th>Angualr</th>
+          <th>AWS</th>
+          <th>OverallRating</th>
+          <th>OverallComment</th>
+         
+          <th>Action</th>
+        </tr>
+      </thead>
+  
+      <tbody>    
+        <tr *ngFor="let evaluation of evaluationlist | filter:searchText">
+          <td > 
+        
+            {{evaluation.evaluationId}}
+          </td> 
+    
+          <td>{{evaluation.employeeId}}</td>
+          <td>{{evaluation.coreJava}}</td>
+          
+          
+          <td>{{evaluation.springBoot}}</td>
+          <td>{{evaluation.angular}}</td>
+          <td>{{evaluation.react}}</td>
+          <td>{{evaluation.aws}}</td>
+          <td>{{evaluation.mySQL}}</td>
+          <td>{{evaluation.overallRating}}</td>
+          <td>{{evaluation.overallComment}}</td>
+          
+          <td>
+           
+  
+            <i class="bii bi-trash"  (click)="deleteEvaluation(evaluation.evaluationId)" ></i>
+            <!-- <button type="submit" (click)="deleteEmployee(t.employeeId)" class="btn btn-labeled btn-danger">
+              <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>DEL</button> -->
+           
+              <!-- <a (click)="updateEmployee()">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </a> &nbsp;&nbsp;
+              <a (click)="deleteEmployee()">
+                <span class="glyphicon glyphicon-trash"style="color:red;" ></span>
+              </a> -->
+          </td>
+         
+  
+      </tr>
+      
+      </tbody>
+    </table>
+    </div>
+  </section>
+  <!-- <router-outlet></router-outlet> -->
+  
+  
+  
+  

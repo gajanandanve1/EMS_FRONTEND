@@ -1,0 +1,50 @@
+/* h1{
+align-items: center;
+padding-left: 30%;
+color: cornflowerblue;
+}
+p{
+    padding-left: 40%;
+color: red
+}
+input{
+    box-sizing: 10%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+  } */
+
+  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .60em;
+    padding-right: .75em;
+    
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    h2{
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .container{
+        padding-top: 1%;
+        padding-left: 80px;
+       
+    }
+    label{
+        font-family: Georgia, 'Times New Roman', Times, serifs;
+    }
+
+    .year{
+     box-sizing: 10%;
+    }
+    option[default] {
+        display: none;
+     }

@@ -1,0 +1,87 @@
+.table{
+    background-color: aliceblue;
+    /* margin-left:180px;
+    padding-left: 60px; */
+    background-position:center;
+   
+    text-align: center;
+   overflow: hidden;
+   tab-size:unset;
+   table-layout:unset;
+   width: 100%;
+   
+  }
+
+  h3{
+    text-align: center;
+    padding-left: 10%;
+    text-decoration: underline;
+    text-rendering: auto;
+    text-shadow: 0cap;
+    color: #29c2bd;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  
+  input[type=text],
+  select {
+    width: 50%;
+    padding: 0px 0px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid rgb(25, 20, 20);
+    border-radius: 2 px;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  th {
+    font-family: Georgia;
+    text-align: center;
+    font-size: 12px;
+    background-color:    #88B4BA ;
+    border: 1px solid black;
+    
+    
+  }
+  
+  td{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid black;
+    size-adjust: inherit;
+  
+  }
+  
+    h2 {
+      font-family: Georgia;
+      color: white;
+      padding-top: 00px;
+      padding-bottom: 00px;
+      padding-left: 330px;
+    }
+    u{
+      color: blue;
+    }
+  
+    .search-employee {
+      max-width: 350px;
+    
+     
+    }
+    .bi {
+      width: 40%;
+      height: 20%;
+      color: black;
+      size: 20px;
+      border-radius: 20px;
+    }
+    .bii {
+      width: 40%;
+      height: 20%;
+      color: rgb(236, 13, 13);
+      size: 20px;
+      border-radius: 20px;
+    }

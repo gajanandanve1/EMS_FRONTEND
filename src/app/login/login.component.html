@@ -1,0 +1,61 @@
+<html lang="en">
+  <!-- <nav class="navbar navbar-dark" >
+
+    <h2 style="color: white;">LOGIN</h2>
+  </nav> -->
+ <app-nav-bar-home></app-nav-bar-home>
+<br>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head> 
+<html>
+<head>
+  <title>Login Form Design</title>
+  <link type="text/css" href="login.component.css">
+</head>
+<style>
+ 
+</style>
+
+<body>
+  <div class="backgroundimage">
+   <div class="loginbox">
+    <div class="text-center image-size-small position-relative">
+      <img src="https://annedece.sirv.com/Images/user-vector.jpg" class="rounded-circle p-2 bg-white">
+      <div class="icon-camera">
+      <a href="" class="text-primary"><i class="lni lni-camera"></i></a>
+      </div>
+      </div>
+      <br>
+      <br>
+    <h1>Login Here</h1>
+
+<!-- <div class="container">
+  <h2>Login</h2> -->
+  <form #loginform="ngForm" (ngSubmit)="loginEms()">
+    <small class="text-danger">{{msg}}</small>
+    <p>User name</p>
+       <input  type="username" class="form-control" placeholder="Enter username" name="username"
+       [(ngModel)]="reg.username" 
+       required #username="ngModel">
+       <p>Password</p>
+       <input type="password" class="form-control" placeholder="Enter Password" name="password" 
+       [(ngModel)]="reg.password" required #password="ngModel">
+       <input  [disabled]= "loginform.form.invalid"   type="submit" name="" value="Login">
+       
+    <!-- <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div> -->
+      <a href="signup" >Sign up</a>
+
+  </form>
+  </div>
+
+ </div>
+</body>
+</html> 

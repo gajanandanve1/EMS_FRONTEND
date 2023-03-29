@@ -1,0 +1,28 @@
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .60em;
+    padding-right: .75em;
+    
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    h2{
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .container{
+        padding-top: 1%;
+        padding-left: 80px;
+       
+    }
+    label{
+        font-family: Georgia, 'Times New Roman', Times, serifs;
+    }
+
+    .year{
+     box-sizing: 10%;
+    }

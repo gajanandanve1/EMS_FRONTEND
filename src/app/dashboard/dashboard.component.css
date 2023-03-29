@@ -1,0 +1,38 @@
+
+.column {
+  width: 13%;
+  
+  height: 670px;
+}
+.column1 {
+  width: 84.75%;
+
+  height: 610%; 
+
+  
+}
+.material-icons{
+  width: 20%;
+}
+
+
+.col-2 {
+  width: 20%;
+  
+  height: 590px;
+}
+.col-8 {
+  width: 40%;
+
+  height: 590px; 
+}
+
+a:hover{
+  color: #88B4BA;
+  transition: all 0.5s;;
+}
+
+a{
+  font-size: 20px;
+  /*color: white;*/
+}

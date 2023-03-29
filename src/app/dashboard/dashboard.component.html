@@ -1,0 +1,31 @@
+
+
+
+<app-nav-bar></app-nav-bar>
+<div>
+  <!-- <nav class="navbar"  style="background-color: #144358;">
+
+    <h2 style="padding-left: 2%; color: aliceblue">EMS Dashboard</h2>
+  </nav> -->
+<div class="row">
+  <div class="column" style="background-color: #144358; padding-left: 2%;padding-top: 2%;">
+    <!-- <ul>
+      <li *ngFor="let item of sidenavList">
+         {{item}} 
+      </li>
+    </ul> -->
+    
+   
+    <b> <a style = "color: #88B4BA" routerLink="/dashboard/employeedetails"><i class="material-icons" style="font-size:20px">person</i>Employee details</a></b><br><br>
+    <b> <a style = "color: #88B4BA" routerLink="/dashboard/evaluation">Evaluation</a></b><br><br>
+    <b> <a  style = "color: #88B4BA" routerLink="/dashboard/employeedet">Feedback</a></b> <br><br>
+    <b><a  style = "color: #88B4BA" routerLink="/dashboard/view-employee">Report</a> </b><br><br>
+  
+  </div>
+  <div class="column1" style="background-color:ghostwhite; height:  80%;">
+   
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+</div>

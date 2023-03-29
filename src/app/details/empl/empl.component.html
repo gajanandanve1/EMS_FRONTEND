@@ -1,0 +1,49 @@
+<p>empl works!</p>
+<h2>Employee</h2>
+<div>
+    <input type="file" (change)="readExcel($event)">
+  </div>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Employee ID
+        </th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Grade</th>
+        <th scope="col">Mobile No</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date of <br> Joining</th>
+        <th scope="col">Date Of <br>Birth</th>
+        <th scope="col">Previous <br>Experience</th>
+        <th scope="col">Experience <br>In Yash</th>
+        <th scope="col">Total<br>  Experience</th>
+        <th scope="col">Base <br> Location</th>
+        <th scope="col">Current<br>  Location</th>
+        <th scope="col">Primary <br>Skills</th>
+        <th scope="col">Secondary<br>  Skills</th>
+        <th scope="col">Frontend <br> Specialization</th>
+        <th scope="col">Cloud<br> Specialization</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let data of ExcelData ">
+     <th scope="row">{{data.EmployeeId}}</th>
+     <td>{{data.EmployeeName}}</td>
+    <td>{{data.Grade}}</td>
+    <td>{{data.MobileNo}}</td>
+    <td><a><u>{{data.Email}}</u></a></td>
+    <td>{{data.dateOfJoining}}</td>
+    <td>{{data.dob}}</td>
+    <td>{{data.exprience}}</td>
+    <td>{{data.exprienceInYash}}</td>
+    <td>{{data.totalExprience}}</td>
+    <td>{{data.baseLocation}}</td>
+    <td>{{data.currentLocation}}</td>
+    <td>{{data.primarySkills}}</td>
+    <td>{{data.secondarySkills}}</td>
+    <td>{{data.frontendSpecialization}}</td>
+    <td>{{data.cloudTech}}</td>
+    </tr>
+</tbody>
+</table>

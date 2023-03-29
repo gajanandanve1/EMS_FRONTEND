@@ -1,0 +1,350 @@
+
+
+
+<section>
+  <div class="container" >
+    <div class="row d-flex justify-content-center align-items-center h-10">
+      <div class="col">
+        <div class="card card-registration my-2" >
+          <div class="row g-0">
+            <div class="col-xl-12" style="background-color: #88B4BA;">
+              <div class="card-body p-md-3 text-black">
+                <h2 class="mb-4 text-uppercase" >Evaluation Form</h2>
+                <form  #prof="ngForm" (ngSubmit)="editEvaluation()" >
+                  
+                  <div class="row mb-4">
+                    <div style="padding-left: 70%">
+                        
+                      <div class="col-8">
+                          <button class="btn btn-outline-light" routerLink="/dashboard/rating-description" type="reset" >Rating Description</button>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-outline">
+                              <label class="form-label"  for="form3Example1m">Date</label>
+                              <input type="date"  id="date" name="evaluationDate"  class="form-control form-control-sm" 
+                               [(ngModel)]="currentDate"/>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-outline">
+                              <label class="form-label" for="form3Example1m">Employee Id</label>
+                              
+                              <input type="" id="employeeId" name="employeeId"  class="form-control form-control-sm" 
+                              [(ngModel)]="employee.employeeId"/>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-outline">
+                              <label class="form-label" for="form3Example1m">Employee Name</label>
+                              <input type="text" id="employeeName"  name="employeeName"  class="form-control form-control-sm" 
+                              [(ngModel)]="employee.employeeName"/>
+                            </div>
+                          </div>
+                          <br>
+                        
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-outline">
+                              <label class="form-label"  for="form3Example1m">Core Java</label>
+                              <br>
+                  
+                              <select name="coreJava" (change)="change($event)" 
+                              style="width: 100%; height: 100%;" 
+                              name="evaluation" class="form-control"
+                              [(ngModel)]="evaluation.coreJava">
+                             <option value="Get">--Select Id--</option>
+                              <option *ngFor="let rating of r " [value]="rating.ratingDesc">
+                               
+                                {{rating.ratingDesc}}
+                              
+                              </option>
+                            </select>
+    
+                            </div>
+                          </div>
+                       
+
+                  <div class="col-md-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">Angular</label>
+                      <br>
+                      <select name="angular" (change)="change($event)" 
+                      style="width: 100%; height: 100%;" 
+                      name="evaluation" class="form-control"
+                      [(ngModel)]="evaluation.angular">
+                     <option value="Get">--Select Id--</option>
+                      <option *ngFor="let rating of r " [value]="rating.ratingDesc">
+                       
+                        {{rating.ratingDesc}}
+                      
+                      </option>
+                    </select>
+                  
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">React</label>
+                      <br>
+                      <select name="coreJava" (change)="change($event)" 
+                              style="width: 100%; height: 100%;" 
+                              name="evaluation" class="form-control"
+                              [(ngModel)]="evaluation.react">
+                             <option value="Get">--Select Id--</option>
+                              <option *ngFor="let rating of r " [value]="rating.ratingDesc">
+                               
+                                {{rating.ratingDesc}}
+                              
+                              </option>
+                            </select>
+                    </div>
+                  </div>
+                
+                </div>
+               
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-outline">
+                      <label class="form-label"  for="form3Example1m">SpringBoot</label>
+                      <br>
+                      <select name="springBoot" (change)="change($event)" 
+                              style="width: 100%; height: 100%;" 
+                              name="evaluation" class="form-control"
+                              [(ngModel)]="evaluation.springBoot">
+                             <option value="Get">--Select Id--</option>
+                              <option *ngFor="let rating of r " [value]="rating.ratingDesc">
+                               
+                                {{rating.ratingDesc}}
+                              
+                              </option>
+                            </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">MySQL</label>
+                      <br>
+                      <select name="mySQL" (change)="change($event)" 
+                      style="width: 100%; height: 100%;" 
+                      name="evaluation" class="form-control"
+                      [(ngModel)]="evaluation.mySQL">
+                     <option value="Get">--Select Id--</option>
+                      <option *ngFor="let rating of r " [value]="rating.ratingDesc">
+                       
+                        {{rating.ratingDesc}}
+                      
+                      </option>
+                    </select>
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">AWS</label>
+                      <br>
+                      <select name="aws" (change)="change($event)" 
+                      style="width: 100%; height: 100%;" 
+                      name="evaluation" class="form-control"
+                      [(ngModel)]="evaluation.aws">
+                     <option>--Select Id--</option>
+                      <option *ngFor="let rating of r " [value]="rating.ratingDesc">
+                       
+                        {{rating.ratingDesc}}
+                      
+                      </option>
+                    </select>
+                    </div>
+                  </div>
+                
+                </div>
+      
+              </div>
+               
+                
+
+                
+             
+               <div class="row mt-4">
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">Overall Rating</label>
+                    <!-- <input id="textboxid" type="text" id="overallRating" name="overallRating"  class="form-control form-control-sm" 
+                    placeholder="Enter Overall Rating" [(ngModel)]="evaluation.overallRating"/> -->
+
+                    <select name="overallRating" (change)="change1($event)" 
+                      style="width: 100%; height: 100%;" 
+                      name="evaluation" class="form-control"
+                      [(ngModel)]="evaluation.overallRating">
+                     <option>--Select Id--</option>
+                      <option *ngFor="let Overall of overallRating " >
+                       
+                        {{Overall}}
+                      
+                      </option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n1">Overall Comment</label>
+                    <input type="text" id="overallComment"  name="overallComment" class="form-control form-control-sm" 
+                    placeholder="Enter Overall Comment" [(ngModel)]="evaluation.overallComment" />
+                    </div>
+                </div>
+               </div>
+                
+                
+                
+              <div style="padding-left: 20%">
+                <div class="row mt-5">
+                  <div class="col-4">
+                      <button class="btn btn-outline-light"   type="submit" >Upload Excel Sheet</button>
+                    </div>
+                  <div class="col-2">
+                  <button class="btn btn-outline-light"  type="submit">Save</button>
+              </div>
+              <div class="col-2">
+                  <button class="btn btn-outline-light"   type="reset" >Cancel</button>
+                </div>
+              </div>
+          </div>
+          
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <p>addevaluation works!</p>
+<section>
+    <div class="container" >
+      <div class="row d-flex justify-content-center align-items-center h-10">
+        <div class="col">
+          <div class="card card-registration my-2" >
+            <div class="row g-0">
+              <div class="col-xl-12" style="background-color: #88B4BA;">
+                <div class="card-body p-md-3 text-black">
+                  <h2 class="mb-4 text-uppercase" >Evaluation Form</h2>
+                  <form #prof="ngForm" >
+                    <div class="row mb-4">
+                      <div style="padding-left:1%">
+                        <div class="col-md-2">
+                            <div class="form-outline">
+                              <label class="form-label"  for="form3Example1m">Date</label>
+                              <input type="date"  id="employeeName" name="employeeName"  class="form-control form-control-sm" 
+                              placeholder="Enter Employee Id" />
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Employee Id</label>
+                        <input type="text" id="employeeName" name="employeeName"  class="form-control form-control-sm" 
+                         />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Employee Name</label>
+                        <input type="text" id="employeeName"  name="employeeName"  class="form-control form-control-sm" 
+                          />
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">Email Id</label>
+                          <input type="text" id="employeeName" name="employeeName"  class="form-control form-control-sm" 
+                           />
+                        </div>
+                      </div>
+                  </div>
+                 
+                  
+<div style="padding-top: 3%">
+  <table class="table table-striped "  >
+    <thead>
+      <tr>
+        <th>Skills</th>
+        <th>Rating</th>
+        <th>Proficiency</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr >
+        <td> <input type="text" id="grade" name="grade"  class="form-control form-control-sm" 
+            placeholder="Select Skills"  /></td>
+        <td><input type="number" id="grade" name="grade"  class="form-control form-control-sm" 
+            placeholder="Select Rating"  /></td>
+        <td><input type="text" id="grade" name="grade"  class="form-control form-control-sm" 
+            placeholder="Select Proficiency"  /></td>
+        <td> <button id="b1" type="submit" style="color:green" class="btn btn-success">Add</button></td>
+        <td> <button id="b2" type="submit" style="color:orange" class="btn btn-primary">Edit</button></td>
+        <td> <button id="b3" type="submit"  style="color:red" class="btn btn-danger">Delete</button></td>
+        
+    </tr>
+    <tr>
+<td><input type="text" id="grade" name="grade"  class="form-control form-control-sm" 
+    value="Java" /></td>
+<td><input type="text" id="grade" name="grade"  class="form-control form-control-sm" 
+  value="1" /></td>
+<td><input type="text" id="grade" name="grade"  class="form-control form-control-sm" 
+    value="Good"  /></td>
+<td></td>
+<td></td>
+<td></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+                  
+               
+                 <div class="row mt-4">
+                  <div class="col-md-6">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Overall Rating</label>
+                      <input id="textboxid" type="text" id="grade" name="grade"  class="form-control form-control-sm" 
+                      placeholder="Enter Overall Rating"/>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n1">Overall Comment</label>
+                      <input type="text" id="mobileNo"  name="mobileNo" class="form-control form-control-sm" 
+                      placeholder="Enter Overall Comment"  />
+                      </div>
+                  </div>
+                 </div>
+                  
+                  
+                  
+                <div style="padding-left: 20%">
+                  <div class="row mt-5">
+                    <div class="col-4">
+                        <button class="btn btn-outline-light"   type="submit" >Upload Excel Sheet</button>
+                      </div>
+                    <div class="col-2">
+                    <button class="btn btn-outline-light"  type="submit">Save</button>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-outline-light"   type="reset" >Cancel</button>
+                  </div>
+                </div>
+            </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  -->

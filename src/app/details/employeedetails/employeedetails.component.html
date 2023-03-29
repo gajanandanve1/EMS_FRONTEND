@@ -1,0 +1,103 @@
+<section>
+  <div class="row" style="padding-top: 1%">
+    <div class="col-10">
+      <h3>EMPLOYEE DETAILS</h3>
+    </div>
+    <div class="col-2">
+      <button type="submit" class="btn btn-dark"  routerLink="/dashboard/onboard">Add Employee</button>
+    </div>
+  </div>
+  <div class="search-employee">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" 
+    autocomplete="off" placeholder="Start searching here">
+  </div>
+   <!-- <div>
+    <input type="file" (change)="readExcel($event)">
+  </div>  -->
+  <br />
+ 
+  <br>
+<div class="table-responsive text-nowrap">
+ 
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Employee ID
+        </th>
+        <th>Employee Name</th>
+        <th>Grade</th>
+        <th>Mobile No</th>
+        <th>Email</th>
+        <th>Date of <br> Joining</th>
+        <th>Date Of <br>Birth</th>
+        <th>Previous <br>Experience</th>
+        <th>Experience <br>In Yash</th>
+        <th>Total<br>  Experience</th>
+        <th>Base <br> Location</th>
+        <th>Current<br>  Location</th>
+        <th>Primary <br>Skills</th>
+        <th>Secondary<br>  Skills</th>
+        <th>Frontend <br> Specialization</th>
+        <th>Cloud<br> Specialization</th>
+        <th>Evaluation</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>    
+      <tr *ngFor="let t of employee | filter:searchText">
+        <td (click)="view(t.employeeId)"> 
+          <i class="material-icons" style="font-size:20px">person</i>
+          {{t.employeeId}}
+        </td> 
+  
+        <td>{{t.employeeName}}</td>
+        <td>{{t.grade}}</td>
+        <td>{{t.mobileNo}}</td>
+        <td><a><u>{{t.email}}</u></a></td>
+        <td>{{t.dateOfJoining}}</td>
+        <td>{{t.dob}}</td>
+        <td>{{t.exprience}}</td>
+        <td>{{t.exprienceInYash}}</td>
+        <td>{{t.totalExprience}}</td>
+        <td>{{t.baseLocation}}</td>
+        <td>{{t.currentLocation}}</td>
+        <td>{{t.primarySkills}}</td>
+        <td>{{t.secondarySkills}}</td>
+        <td>{{t.frontendSpecialization}}</td>
+        <td>{{t.cloudTech}}</td>
+        <td>
+          <!-- <button class='btn btn-info'  (click)="showEvaluation(t.employeeId)"
+          data-toggle="modal" data-target="">Evaluation</button> -->
+          <i class="bie bi-clipboard-check" (click)="showEvaluation(t.employeeId)"></i>
+        <td>
+          <i class="bi bi-pen"  (click)="updateEmployee(t.employeeId)"></i>&nbsp;
+          <!-- <button  class='btn btn-info'  (click)="updateEmployee(t.employeeId)"
+          data-toggle="modal" data-target="">Update</button>&nbsp; -->
+
+          <i class="bii bi-trash"  (click)="deleteEmployee(t.employeeId)" ></i>
+          <!-- <button type="submit" (click)="deleteEmployee(t.employeeId)" class="btn btn-labeled btn-danger">
+            <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>DEL</button> -->
+         
+            <!-- <a (click)="updateEmployee()">
+              <span class="glyphicon glyphicon-pencil"></span>
+          </a> &nbsp;&nbsp;
+            <a (click)="deleteEmployee()">
+              <span class="glyphicon glyphicon-trash"style="color:red;" ></span>
+            </a> -->
+        </td>
+       
+
+    </tr>
+    
+    </tbody>
+  </table>
+  </div>
+</section>
+<!-- <router-outlet></router-outlet> -->
+
+
+<a (click)="onEditCloseItems()" class="text-info float-right">
+  <i class="mdi mdi-{{isEditItems ? 'close' : 'pencil'}} mdi-20px"></i>
+</a>
+

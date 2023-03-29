@@ -1,0 +1,12 @@
+
+h3{
+    font-size: 200%;
+     font:bold;
+}
+button{ 
+        position: absolute;
+        left:90%;bottom: 20%; 
+        background-color:#0a0a23;
+}
+.svgtag{
+            padding-right:20%; position:relative;}

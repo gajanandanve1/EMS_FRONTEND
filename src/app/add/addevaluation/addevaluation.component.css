@@ -1,0 +1,48 @@
+button
+{      
+ background-color:#0a0a23;
+}
+h2{
+    color: rgb(16, 15, 15);
+    font-weight: bold;
+    text-align: center;
+}
+.textboxid
+{
+    height: 10%;
+    width: 100%;
+}
+.square {
+    
+    width: 930px;
+    height: 100px;
+    
+    border-width: 20%;
+  
+    background-color: lightgrey;
+   
+    border: 2px solid rgb(13, 14, 13);
+   
+    margin: 20px;
+}
+.mysquare
+{
+    padding-left: 5px;
+    
+}
+.b1
+{
+    background: green;
+   
+}
+.b2{
+    color: orange;
+}
+.b3
+{
+    color: red;
+}
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
